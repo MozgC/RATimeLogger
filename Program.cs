@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
+using TimeLogger.Properties;
 
 namespace TimeLogger
 {
@@ -14,10 +16,19 @@ namespace TimeLogger
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
-			MainForm f = new MainForm();
+			if (string.IsNullOrEmpty(Settings.Default.LogFilePath))
+			{
+				Settings.Default.LogFilePath = Path.Combine(
+					Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+					@"RA\TimeLogger\timelog.txt");
+				
+				Settings.Default.Save();
+			}
+
+			var f = new MainForm();
 			f.ShowInTaskbar = false;
 			f.WindowState = FormWindowState.Minimized;
-			
+
 			Application.Run(f);
 		}
 

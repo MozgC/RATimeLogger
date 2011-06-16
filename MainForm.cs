@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
 using TimeLogger.Properties;
@@ -67,6 +68,15 @@ namespace TimeLogger
 
 			Settings.Default.AllowNotSpecifyAction = allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Checked;
 			Settings.Default.Save();
+		}
+
+		private void openLogFileToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			var process = new Process();
+			process.StartInfo.FileName = Settings.Default.LogFilePath;
+			process.StartInfo.Verb = "Open";
+			process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+			process.Start();
 		}
 	}
 }

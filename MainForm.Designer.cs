@@ -33,10 +33,11 @@
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.enabledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.enterCurrentActivityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
-			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.openLogFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -44,11 +45,12 @@
 			// 
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.enabledToolStripMenuItem,
-            this.enterCurrentActivityToolStripMenuItem,
             this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem,
+            this.enterCurrentActivityToolStripMenuItem,
+            this.openLogFileToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(324, 114);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(324, 136);
 			// 
 			// enabledToolStripMenuItem
 			// 
@@ -65,6 +67,13 @@
 			this.enterCurrentActivityToolStripMenuItem.Size = new System.Drawing.Size(323, 22);
 			this.enterCurrentActivityToolStripMenuItem.Text = "Enter current activity...";
 			this.enterCurrentActivityToolStripMenuItem.Click += new System.EventHandler(this.enterCurrentActivityToolStripMenuItem_Click);
+			// 
+			// allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem
+			// 
+			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Name = "allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem";
+			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Size = new System.Drawing.Size(323, 22);
+			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Text = "Allow closing without specifying current action";
+			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Click += new System.EventHandler(this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem_Click);
 			// 
 			// exitToolStripMenuItem
 			// 
@@ -87,12 +96,12 @@
 			this.timer1.Interval = 600000;
 			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
 			// 
-			// allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem
+			// openLogFileToolStripMenuItem
 			// 
-			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Name = "allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem";
-			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Size = new System.Drawing.Size(323, 22);
-			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Text = "Allow closing without specifying current action";
-			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Click += new System.EventHandler(this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem_Click);
+			this.openLogFileToolStripMenuItem.Name = "openLogFileToolStripMenuItem";
+			this.openLogFileToolStripMenuItem.Size = new System.Drawing.Size(323, 22);
+			this.openLogFileToolStripMenuItem.Text = "Open log file";
+			this.openLogFileToolStripMenuItem.Click += new System.EventHandler(this.openLogFileToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -116,5 +125,6 @@
 		private System.Windows.Forms.Timer timer1;
 		private System.Windows.Forms.ToolStripMenuItem enterCurrentActivityToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem openLogFileToolStripMenuItem;
 	}
 }
