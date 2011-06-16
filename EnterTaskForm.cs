@@ -30,10 +30,7 @@ namespace TimeLogger
 					return;
 				}
 
-				string dir = Path.GetDirectoryName(Settings.Default.LogFilePath);
-				if (!Directory.Exists(dir))
-					Directory.CreateDirectory(dir);
-
+				FileHelper.CreateLogFileIfNotExists();
 				File.AppendAllText(Settings.Default.LogFilePath, string.Format("{0}\t{1}{2}", _formShown, activity, Environment.NewLine));
 			}
 			catch (Exception ex)

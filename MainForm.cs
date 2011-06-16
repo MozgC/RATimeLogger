@@ -72,6 +72,8 @@ namespace TimeLogger
 
 		private void openLogFileToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+			FileHelper.CreateLogFileIfNotExists();
+
 			var process = new Process();
 			process.StartInfo.FileName = Settings.Default.LogFilePath;
 			process.StartInfo.Verb = "Open";
