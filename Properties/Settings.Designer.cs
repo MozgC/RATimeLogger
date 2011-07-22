@@ -46,5 +46,16 @@ namespace TimeLogger.Properties {
                 this["LogFilePath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection LastEnteredActivities {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["LastEnteredActivities"]));
+            }
+            set {
+                this["LastEnteredActivities"] = value;
+            }
+        }
     }
 }

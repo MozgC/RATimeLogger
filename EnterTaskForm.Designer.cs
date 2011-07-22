@@ -31,9 +31,9 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnterTaskForm));
 			this.btnOK = new System.Windows.Forms.Button();
 			this.lbActivities = new System.Windows.Forms.ListBox();
-			this.txtCustomActivity = new System.Windows.Forms.TextBox();
 			this.rbFromList = new System.Windows.Forms.RadioButton();
 			this.rbCustom = new System.Windows.Forms.RadioButton();
+			this.cbCustomActivity = new System.Windows.Forms.ComboBox();
 			this.SuspendLayout();
 			// 
 			// btnOK
@@ -64,15 +64,6 @@
 			this.lbActivities.TabIndex = 3;
 			this.lbActivities.DoubleClick += new System.EventHandler(this.lbActivities_DoubleClick);
 			// 
-			// txtCustomActivity
-			// 
-			this.txtCustomActivity.Enabled = false;
-			this.txtCustomActivity.Location = new System.Drawing.Point(6, 183);
-			this.txtCustomActivity.Name = "txtCustomActivity";
-			this.txtCustomActivity.Size = new System.Drawing.Size(246, 20);
-			this.txtCustomActivity.TabIndex = 4;
-			this.txtCustomActivity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCustomActivity_KeyDown);
-			// 
 			// rbFromList
 			// 
 			this.rbFromList.AutoSize = true;
@@ -96,14 +87,23 @@
 			this.rbCustom.UseVisualStyleBackColor = true;
 			this.rbCustom.CheckedChanged += new System.EventHandler(this.rbCustom_CheckedChanged);
 			// 
+			// cbCustomActivity
+			// 
+			this.cbCustomActivity.FormattingEnabled = true;
+			this.cbCustomActivity.Location = new System.Drawing.Point(6, 183);
+			this.cbCustomActivity.Name = "cbCustomActivity";
+			this.cbCustomActivity.Size = new System.Drawing.Size(246, 21);
+			this.cbCustomActivity.TabIndex = 4;
+			this.cbCustomActivity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbCustomActivity_KeyDown);
+			// 
 			// EnterTaskForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(258, 237);
+			this.Controls.Add(this.cbCustomActivity);
 			this.Controls.Add(this.rbCustom);
 			this.Controls.Add(this.rbFromList);
-			this.Controls.Add(this.txtCustomActivity);
 			this.Controls.Add(this.lbActivities);
 			this.Controls.Add(this.btnOK);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -124,9 +124,9 @@
 
 		private System.Windows.Forms.Button btnOK;
 		private System.Windows.Forms.ListBox lbActivities;
-		private System.Windows.Forms.TextBox txtCustomActivity;
 		private System.Windows.Forms.RadioButton rbFromList;
 		private System.Windows.Forms.RadioButton rbCustom;
+		private System.Windows.Forms.ComboBox cbCustomActivity;
 	}
 }
 

@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Text;
 using TimeLogger.Properties;
 
 namespace TimeLogger
@@ -13,7 +14,7 @@ namespace TimeLogger
 
 			if (!File.Exists(Settings.Default.LogFilePath))
 			{
-				StreamWriter logFileWriter = File.CreateText(Settings.Default.LogFilePath);
+				var logFileWriter = new StreamWriter(Settings.Default.LogFilePath, false, new UTF8Encoding(true));
 				logFileWriter.Dispose();
 			}
 		}

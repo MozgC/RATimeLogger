@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Specialized;
 using System.IO;
 using System.Windows.Forms;
 using TimeLogger.Properties;
@@ -23,6 +24,11 @@ namespace TimeLogger
 					@"RA\TimeLogger\timelog.txt");
 				
 				Settings.Default.Save();
+			}
+
+			if (Settings.Default.LastEnteredActivities == null)
+			{
+				Settings.Default.LastEnteredActivities = new StringCollection();
 			}
 
 			var f = new MainForm();
