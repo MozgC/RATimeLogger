@@ -41,7 +41,7 @@
 			this.btnOK.Location = new System.Drawing.Point(177, 209);
 			this.btnOK.Name = "btnOK";
 			this.btnOK.Size = new System.Drawing.Size(75, 23);
-			this.btnOK.TabIndex = 1;
+			this.btnOK.TabIndex = 4;
 			this.btnOK.Text = "OK";
 			this.btnOK.UseVisualStyleBackColor = true;
 			this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -61,7 +61,7 @@
 			this.lbActivities.Location = new System.Drawing.Point(6, 29);
 			this.lbActivities.Name = "lbActivities";
 			this.lbActivities.Size = new System.Drawing.Size(246, 121);
-			this.lbActivities.TabIndex = 3;
+			this.lbActivities.TabIndex = 1;
 			this.lbActivities.DoubleClick += new System.EventHandler(this.lbActivities_DoubleClick);
 			// 
 			// rbFromList
@@ -71,7 +71,7 @@
 			this.rbFromList.Location = new System.Drawing.Point(6, 6);
 			this.rbFromList.Name = "rbFromList";
 			this.rbFromList.Size = new System.Drawing.Size(246, 17);
-			this.rbFromList.TabIndex = 5;
+			this.rbFromList.TabIndex = 0;
 			this.rbFromList.TabStop = true;
 			this.rbFromList.Text = "Please choose your current activity from the list";
 			this.rbFromList.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@
 			this.rbCustom.Location = new System.Drawing.Point(6, 160);
 			this.rbCustom.Name = "rbCustom";
 			this.rbCustom.Size = new System.Drawing.Size(191, 17);
-			this.rbCustom.TabIndex = 6;
+			this.rbCustom.TabIndex = 2;
 			this.rbCustom.Text = "or enter your custom activity below:";
 			this.rbCustom.UseVisualStyleBackColor = true;
 			this.rbCustom.CheckedChanged += new System.EventHandler(this.rbCustom_CheckedChanged);
@@ -93,11 +93,12 @@
 			this.cbCustomActivity.Location = new System.Drawing.Point(6, 183);
 			this.cbCustomActivity.Name = "cbCustomActivity";
 			this.cbCustomActivity.Size = new System.Drawing.Size(246, 21);
-			this.cbCustomActivity.TabIndex = 4;
+			this.cbCustomActivity.TabIndex = 3;
 			this.cbCustomActivity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbCustomActivity_KeyDown);
 			// 
 			// EnterTaskForm
 			// 
+			this.AcceptButton = this.btnOK;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(258, 237);
