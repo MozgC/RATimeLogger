@@ -32,12 +32,13 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.enabledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.enterCurrentActivityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.enterCurrentActivityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.openLogFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
-			this.openLogFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -48,9 +49,10 @@
             this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem,
             this.enterCurrentActivityToolStripMenuItem,
             this.openLogFileToolStripMenuItem,
+            this.settingsToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(324, 136);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(324, 158);
 			// 
 			// enabledToolStripMenuItem
 			// 
@@ -61,6 +63,13 @@
 			this.enabledToolStripMenuItem.Text = "Enabled";
 			this.enabledToolStripMenuItem.Click += new System.EventHandler(this.enabledToolStripMenuItem_Click);
 			// 
+			// allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem
+			// 
+			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Name = "allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem";
+			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Size = new System.Drawing.Size(323, 22);
+			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Text = "Allow closing without specifying current action";
+			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Click += new System.EventHandler(this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem_Click);
+			// 
 			// enterCurrentActivityToolStripMenuItem
 			// 
 			this.enterCurrentActivityToolStripMenuItem.Name = "enterCurrentActivityToolStripMenuItem";
@@ -68,12 +77,19 @@
 			this.enterCurrentActivityToolStripMenuItem.Text = "Enter current activity...";
 			this.enterCurrentActivityToolStripMenuItem.Click += new System.EventHandler(this.enterCurrentActivityToolStripMenuItem_Click);
 			// 
-			// allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem
+			// openLogFileToolStripMenuItem
 			// 
-			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Name = "allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem";
-			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Size = new System.Drawing.Size(323, 22);
-			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Text = "Allow closing without specifying current action";
-			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Click += new System.EventHandler(this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem_Click);
+			this.openLogFileToolStripMenuItem.Name = "openLogFileToolStripMenuItem";
+			this.openLogFileToolStripMenuItem.Size = new System.Drawing.Size(323, 22);
+			this.openLogFileToolStripMenuItem.Text = "Open log file";
+			this.openLogFileToolStripMenuItem.Click += new System.EventHandler(this.openLogFileToolStripMenuItem_Click);
+			// 
+			// settingsToolStripMenuItem
+			// 
+			this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+			this.settingsToolStripMenuItem.Size = new System.Drawing.Size(323, 22);
+			this.settingsToolStripMenuItem.Text = "Settings...";
+			this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
 			// 
 			// exitToolStripMenuItem
 			// 
@@ -95,13 +111,6 @@
 			this.timer1.Enabled = true;
 			this.timer1.Interval = 600000;
 			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-			// 
-			// openLogFileToolStripMenuItem
-			// 
-			this.openLogFileToolStripMenuItem.Name = "openLogFileToolStripMenuItem";
-			this.openLogFileToolStripMenuItem.Size = new System.Drawing.Size(323, 22);
-			this.openLogFileToolStripMenuItem.Text = "Open log file";
-			this.openLogFileToolStripMenuItem.Click += new System.EventHandler(this.openLogFileToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -126,5 +135,6 @@
 		private System.Windows.Forms.ToolStripMenuItem enterCurrentActivityToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem openLogFileToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
 	}
 }

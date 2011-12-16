@@ -80,5 +80,13 @@ namespace TimeLogger
 			process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
 			process.Start();
 		}
+
+		private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			using (var f = new SettingsForm())
+			{
+				f.ShowDialog();
+			}
+		}
 	}
 }
