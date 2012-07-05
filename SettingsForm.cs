@@ -13,6 +13,7 @@ namespace TimeLogger
 
 		private void SettingsForm_Load(object sender, EventArgs e)
 		{
+			udTimerInterval.Value = Settings.Default.TimerInterval;
 			txtLogFilePath.Text = Settings.Default.LogFilePath;
 		}
 
@@ -29,6 +30,7 @@ namespace TimeLogger
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
+			Settings.Default.TimerInterval = (int)udTimerInterval.Value;
 			Settings.Default.LogFilePath = txtLogFilePath.Text;
 			Settings.Default.Save();
 		}

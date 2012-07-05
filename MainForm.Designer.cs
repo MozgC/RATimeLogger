@@ -38,7 +38,7 @@
 			this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.askActivityTimer = new System.Windows.Forms.Timer(this.components);
 			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -52,7 +52,7 @@
             this.settingsToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(324, 158);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(324, 136);
 			// 
 			// enabledToolStripMenuItem
 			// 
@@ -106,11 +106,11 @@
 			this.notifyIcon1.Visible = true;
 			this.notifyIcon1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseUp);
 			// 
-			// timer1
+			// askActivityTimer
 			// 
-			this.timer1.Enabled = true;
-			this.timer1.Interval = 600000;
-			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+			this.askActivityTimer.Enabled = true;
+			this.askActivityTimer.Interval = 600000;
+			this.askActivityTimer.Tick += new System.EventHandler(this.askActivityTimer_Tick);
 			// 
 			// MainForm
 			// 
@@ -131,7 +131,7 @@
 		private System.Windows.Forms.ToolStripMenuItem enabledToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
 		private System.Windows.Forms.NotifyIcon notifyIcon1;
-		private System.Windows.Forms.Timer timer1;
+		private System.Windows.Forms.Timer askActivityTimer;
 		private System.Windows.Forms.ToolStripMenuItem enterCurrentActivityToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem openLogFileToolStripMenuItem;

@@ -32,7 +32,7 @@ namespace TimeLogger
 			}
 		}
 
-		private void timer1_Tick(object sender, EventArgs e)
+		private void askActivityTimer_Tick(object sender, EventArgs e)
 		{
 			if (!enabledToolStripMenuItem.Checked)
 			{
@@ -53,7 +53,13 @@ namespace TimeLogger
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem.Checked = Settings.Default.AllowNotSpecifyAction;
+			ReadTimerIntervalFromSettings();
 			Hide();
+		}
+
+		private void ReadTimerIntervalFromSettings()
+		{
+			askActivityTimer.Interval = (int)TimeSpan.FromMinutes(Settings.Default.TimerInterval).TotalMilliseconds;
 		}
 
 		private void enterCurrentActivityToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,7 +91,10 @@ namespace TimeLogger
 		{
 			using (var f = new SettingsForm())
 			{
-				f.ShowDialog();
+				if (f.ShowDialog() == DialogResult.OK)
+				{
+					ReadTimerIntervalFromSettings();
+				}
 			}
 		}
 	}
