@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChooseTimeToDisableDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseTimeToDisableDialog.Designer.cs">
+      <DependentUpon>ChooseTimeToDisableDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnterTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChooseTimeToDisableDialog.resx">
+      <DependentUpon>ChooseTimeToDisableDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnterTaskForm.resx">
       <DependentUpon>EnterTaskForm.cs</DependentUpon>
     </EmbeddedResource>

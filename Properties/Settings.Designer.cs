@@ -69,5 +69,17 @@ namespace TimeLogger.Properties {
                 this["TimerInterval"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public int LastEnteredDisablePeriod {
+            get {
+                return ((int)(this["LastEnteredDisablePeriod"]));
+            }
+            set {
+                this["LastEnteredDisablePeriod"] = value;
+            }
+        }
     }
 }

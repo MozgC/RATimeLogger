@@ -35,10 +35,12 @@
 			this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.enterCurrentActivityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openLogFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.disableForSomeTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
 			this.askActivityTimer = new System.Windows.Forms.Timer(this.components);
+			this.enableTimer = new System.Windows.Forms.Timer(this.components);
 			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -49,10 +51,11 @@
             this.allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem,
             this.enterCurrentActivityToolStripMenuItem,
             this.openLogFileToolStripMenuItem,
+            this.disableForSomeTimeToolStripMenuItem,
             this.settingsToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(324, 136);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(324, 158);
 			// 
 			// enabledToolStripMenuItem
 			// 
@@ -84,6 +87,13 @@
 			this.openLogFileToolStripMenuItem.Text = "Open log file";
 			this.openLogFileToolStripMenuItem.Click += new System.EventHandler(this.openLogFileToolStripMenuItem_Click);
 			// 
+			// disableForSomeTimeToolStripMenuItem
+			// 
+			this.disableForSomeTimeToolStripMenuItem.Name = "disableForSomeTimeToolStripMenuItem";
+			this.disableForSomeTimeToolStripMenuItem.Size = new System.Drawing.Size(323, 22);
+			this.disableForSomeTimeToolStripMenuItem.Text = "Disable for some time...";
+			this.disableForSomeTimeToolStripMenuItem.Click += new System.EventHandler(this.disableForSomeTimeToolStripMenuItem_Click);
+			// 
 			// settingsToolStripMenuItem
 			// 
 			this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
@@ -112,6 +122,10 @@
 			this.askActivityTimer.Interval = 600000;
 			this.askActivityTimer.Tick += new System.EventHandler(this.askActivityTimer_Tick);
 			// 
+			// enableTimer
+			// 
+			this.enableTimer.Tick += new System.EventHandler(this.enableTimer_Tick);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,5 +150,7 @@
 		private System.Windows.Forms.ToolStripMenuItem allowClosingWithoutSpecifyingCurrentActionToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem openLogFileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem disableForSomeTimeToolStripMenuItem;
+		private System.Windows.Forms.Timer enableTimer;
 	}
 }

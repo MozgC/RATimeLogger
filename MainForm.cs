@@ -8,6 +8,12 @@ namespace TimeLogger
 {
 	public partial class MainForm : Form
 	{
+		private bool TimerEnabled
+		{
+			get { return enabledToolStripMenuItem.Checked; }
+			set { enabledToolStripMenuItem.Checked = value; }
+		}
+
 		public MainForm()
 		{
 			InitializeComponent();
@@ -21,6 +27,12 @@ namespace TimeLogger
 		private void enabledToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			enabledToolStripMenuItem.Checked = !enabledToolStripMenuItem.Checked;
+			
+			// if we explcitly enable our timer we need to disable enableTimer that could be set with "Disable for some time" feature
+			if (TimerEnabled) 
+			{
+				enableTimer.Enabled = false;
+			}
 		}
 
 		private void notifyIcon1_MouseUp(object sender, MouseEventArgs e)
@@ -96,6 +108,25 @@ namespace TimeLogger
 					ReadTimerIntervalFromSettings();
 				}
 			}
+		}
+
+		private void disableForSomeTimeToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			using (var f = new ChooseTimeToDisableDialog())
+			{
+				if (f.ShowDialog() == DialogResult.OK)
+				{
+					TimerEnabled = false;
+					enableTimer.Interval = (int)TimeSpan.FromMinutes(f.DisablePeriod).TotalMilliseconds;
+					enableTimer.Enabled = true;
+				}
+			}
+		}
+
+		private void enableTimer_Tick(object sender, EventArgs e)
+		{
+			TimerEnabled = true;
+			enableTimer.Enabled = false;
 		}
 	}
 }
